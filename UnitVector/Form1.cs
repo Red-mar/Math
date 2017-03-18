@@ -32,7 +32,7 @@ namespace UnitVector
 
             Base(g);
 
-            g.DrawLine(p.Color, new Point(250, 250), new Point((currentVector.x + 25) * 10, (-(currentVector.y) + 25) * 10));
+            g.DrawLine(p, new Point(250, 250), new Point((currentVector.x + 25) * 10, (-(currentVector.y) + 25) * 10));
             g.DrawEllipse(p, new RectangleF(new PointF(250-(currentCircle.width/2)*10,250-(currentCircle.height/2)*10), new SizeF(currentCircle.width*10, currentCircle.height*10)));
 
             foreach (var vector in vectorList)
@@ -65,7 +65,7 @@ namespace UnitVector
 
                 lblMag.Text = "\u221A" + (Math.Pow(currentVector.x, 2) + (Math.Pow(currentVector.y, 2)));
                 lblUnitVecMag.Text = "X: " + unitMagX[0] + " / \u221A" + unitMagX[1] + "   Y: " + unitMagY[0] + " / \u221A" + unitMagY[1];
-                lblAngle.Text = ""+Math.Atan2(currentVector.x, currentVector.y);
+                // lblAngle.Text = ""+Math.Atan2(currentVector.x, currentVector.y);
 
                 Refresh();
             }
